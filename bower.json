@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "modernizr": "~2.7.1",
-    "jquery": "~2.1.0"
+    "jquery": "~2.1.0",
+    "brainless": "~2.2.3"
   }
 }
