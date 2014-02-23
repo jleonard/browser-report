@@ -66,8 +66,10 @@ ul{
   margin: 0;
   padding: 0;
   li{
+    list-style-type: none;
     &:before{
-      display: block;
+      display: inline-block;
+      margin-right: 8px;
     }
     &.has:before{
       content: 'yes';
