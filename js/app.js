@@ -6,11 +6,11 @@
   var features = [
     {
       category: 'CSS Features',
-      tests: ['@font-face']
+      tests: ['@font-face','Background Size','Border Image','Border Radius','Box Shadow','Flex Box','Multiple Bgs','Opacity','rgba()','Text Shadow','CSS Animations','CSS Columns','CSS Gradients','CSS Reflections','CSS 2D Transforms','CSS 3D Transforms','CSS Transitions']
     },
     {
       category: 'HTML5 Features',
-      tests: ['Application Cache','Canvas','Canvas Text','Drag and Drop','hashchange Event','History Management','Audio','Video','Web Sockets','Web Workers']
+      tests: ['Touch','WebGL','GeoLocation','Application Cache','Canvas','Canvas Text','Drag and Drop','hashchange Event','History Management','Audio','Video','Web Sockets','Web Workers']
     },
     {
       category: 'HTML5 Storage',
