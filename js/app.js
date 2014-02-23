@@ -38,7 +38,7 @@
         var test = cur.tests[jj].toLowerCase().replace('@','');
         var _class = Modernizr[test] ? 'has' : 'no-has';
         var $el = '<li class='+_class+'>'+test+'</li>';
-        $features.append($li);
+        $features.append($el);
       }
     }
   });
