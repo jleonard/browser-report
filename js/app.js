@@ -35,7 +35,7 @@
       var cur = features[ii];
       var length = cur.tests.length;
       for(var jj = 0; jj < length; jj++){
-        var test = cur.tests[jj].toLowerCase().replace('@','');
+        var test = cur.tests[jj].toLowerCase().replace(/[^a-z0-9]/gi,'');
         var _class = Modernizr[test] ? 'has' : 'no-has';
         var $el = '<li class='+_class+'>'+test+'</li>';
         $features.append($el);
