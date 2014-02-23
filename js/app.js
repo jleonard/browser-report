@@ -53,7 +53,7 @@
       for(var jj = 0; jj < length; jj++){
         var format = cur.formats[jj];
         var _class = Modernizr[type][format] ? 'has' : 'no-has';
-        var $el = '<li class='+_class+'>'type+' '+format+'</li>';
+        var $el = '<li class='+_class+'>'+type+' '+format+'</li>';
         $fileFormats.append($el);
       }
     }
