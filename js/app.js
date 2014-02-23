@@ -49,8 +49,8 @@
     for(var ii = 0; ii < len; ii++){
       var cur = fileFormats[ii];
       var type = cur.type;
-      var len = cur.formats.length;
-      for(var jj = 0; jj < len; jj++){
+      var length = cur.formats.length;
+      for(var jj = 0; jj < length; jj++){
         var format = cur.formats[jj];
         var _class = Modernizr[type][format] ? 'has' : 'no-has';
         var $el = '<li class='+_class+'>'+test+'</li>';
