@@ -40,7 +40,7 @@
       for(var jj = 0; jj < length; jj++){
         var test = cur.tests[jj].toLowerCase().replace(/[^a-z0-9]/gi,'');
         var _class = Modernizr[test] ? 'has' : 'no-has';
-        var $el = '<li class='+_class+'>'+test+'</li>';
+        var $el = '<li class='+_class+'>'+cur.tests[jj]+'</li>';
         $features.append($el);
       }
     }
