@@ -68,14 +68,18 @@ ul{
   li{
     list-style-type: none;
     &:before{
-      display: inline-block;
+      display: inline-block; 
       margin-right: 8px;
+      font-weight: bold;
+      color: #fff;
     }
     &.has:before{
       content: 'yes';
     }
     &.no-has:before{
       content: 'no';
+      background-color: #c30;
+      padding: 4px 8px;
     }
   }
 }
