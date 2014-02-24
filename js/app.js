@@ -33,6 +33,17 @@
     $features = $('#features');
     $fileFormats = $('#fileFormats');
 
+    var parser = new UAParser();
+    var ua = parser.getResult();
+
+    $("#ua").text(ua.ua);
+    $("#ua-engine").text(ua.engine.name);
+    $("#ua-browser").text(ua.browser.name);
+    $("#ua-browser-version").text(ua.browser.major);
+
+    $("#ua-os").text(ua.os.name);
+    $("#ua-os-version").text(ua.os.version);
+
     var len = features.length;
     for(var ii = 0; ii < len; ii++){
       var cur = features[ii];

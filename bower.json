@@ -17,6 +17,7 @@
   "dependencies": {
     "modernizr": "~2.7.1",
     "jquery": "~2.1.0",
-    "brainless": "~2.2.3"
+    "brainless": "~2.2.3",
+    "ua-parser-js": "~0.6.2"
   }
 }
