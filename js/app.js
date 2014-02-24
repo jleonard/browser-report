@@ -1,9 +1,9 @@
+var ua;
+
 (function($){
 
   var $features;
   var $fileFormats;
-  var ua;
-
   var features = [
     {
       category: 'CSS Features',
