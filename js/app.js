@@ -2,6 +2,7 @@
 
   var $features;
   var $fileFormats;
+  var ua;
 
   var features = [
     {
@@ -34,7 +35,7 @@
     $fileFormats = $('#fileFormats');
 
     var parser = new UAParser();
-    var ua = parser.getResult();
+    ua = parser.getResult();
 
     $("#ua").text(ua.ua);
     $("#ua-engine").text(ua.engine.name);
