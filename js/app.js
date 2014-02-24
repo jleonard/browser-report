@@ -39,6 +39,7 @@ var ua;
 
     $("#ua").text(ua.ua);
     $("#ua-engine").text(ua.engine.name);
+    $("#ua-engine-version").text(ua.engine.version);
     $("#ua-browser").text(ua.browser.name);
     $("#ua-browser-version").text(ua.browser.major);
 
