@@ -1,0 +1,23 @@
+{
+  "name": "browser-report",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jleonard/browser-report",
+  "authors": [
+    "jleonard <thejohnleonard@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.7.1",
+    "jquery": "~2.1.0",
+    "brainless": "~2.2.3",
+    "ua-parser-js": "~0.6.2"
+  }
+}

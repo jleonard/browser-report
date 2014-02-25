@@ -49,6 +49,17 @@ gulp.task('less', function () {
   .pipe(livereload())
 });
 
+gulp.task('copy', function () {
+  
+  var dist = '../_mht/';
+
+  gulp.src(['../**','!.*','!../build/**','!../less/**'])
+  .pipe(gulp.dest(dist))
+  .pipe(livereload())
+
+});
+
+
 /*
 * the watch task
 * --------------------
@@ -59,4 +70,4 @@ gulp.task('watch', function () {
   gulp.watch('../less/**/*.less', ['less']);
 });
 
-gulp.task('default', ['less']);
+gulp.task('default', ['less','copy']);
