@@ -53,7 +53,7 @@ gulp.task('copy', function () {
   
   var dist = '../_mht/';
 
-  gulp.src(['../**','!.*','!../build/**','!../less/**'])
+  gulp.src(['../**','!.*','!../build/**','!../less/**','!../bower_components/modernizr/test/**','!../_mht/**'])
   .pipe(gulp.dest(dist))
   .pipe(livereload())
 
