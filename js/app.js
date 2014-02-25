@@ -11,7 +11,7 @@ var ua;
     },
     {
       category: 'HTML5 Features',
-      tests: ['Touch','WebGL','GeoLocation','Application Cache','Canvas','Canvas Text','Drag and Drop','hashchange Event','History Management','Audio','Video','Web Sockets','Web Workers']
+      tests: ['Pointer Events','Touch','WebGL','GeoLocation','Application Cache','Canvas','Canvas Text','Drag and Drop','hashchange Event','History Management','Audio','Video','Web Sockets','Web Workers']
     },
     {
       category: 'HTML5 Storage',
