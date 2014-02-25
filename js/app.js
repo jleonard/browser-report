@@ -7,7 +7,7 @@ var ua;
   var features = [
     {
       category: 'CSS Features',
-      tests: ['@font-face','Background Size','Border Image','Border Radius','Box Shadow','Flex Box','Multiple Bgs','Opacity','rgba()','Text Shadow','CSS Animations','CSS Columns','CSS Gradients','CSS Reflections','CSS 2D Transforms','CSS 3D Transforms','CSS Transitions']
+      tests: ['@font-face','Background Size','Border Image','Border Radius','Box Shadow','Flex Box','Multiple Bgs','Opacity','rgba()','Text Shadow','CSS Animations','CSS Columns','CSS Gradients','CSS Reflections','CSS Transforms','CSS Transforms 3d','CSS Transitions']
     },
     {
       category: 'HTML5 Features',
