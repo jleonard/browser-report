@@ -71,14 +71,18 @@ var ua;
       }
     }
   });
-  
+    
+
+  var touchCount = 0;
   console.log('hi');
   $('body').on('pointerdown',function(e){
-    console.log("Down");
-    console.log(e);
+    touchCount += 1;
+    $("#touches").text(touchCount);
+  });
 
-    console.log("Up");
-    console.log(e);
+  $('body').on('pointerup',function(e){
+    touchCount -= 1;
+    $("#touches").text(touchCount);
   });
   
 
