@@ -73,7 +73,7 @@ gulp.task('html-replace',function(){
     'bower_components/jquery-pointerevents/dist/jquery-pointerevents.js',
     'bower_components/ua-parser-js/src/ua-parser.js',
     'bower_components/modernizr/modernizr.js',
-    'bower_components/feature-detects/css-pointerevents.js'
+    'bower_components/modernizr/feature-detects/css-pointerevents.js'
   ];
 
   var files = [];
