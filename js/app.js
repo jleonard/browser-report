@@ -71,8 +71,13 @@ var ua;
       }
     }
   });
-
+  
+  console.log('hi');
   $('body').on('pointerdown',function(e){
+    console.log("Down");
+    console.log(e);
+
+    console.log("Up");
     console.log(e);
   });
   
