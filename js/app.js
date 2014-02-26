@@ -72,4 +72,9 @@ var ua;
     }
   });
 
+  $('body').on('pointerdown',function(e){
+    console.log(e);
+  });
+  
+
 })(jQuery);	
