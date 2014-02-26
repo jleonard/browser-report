@@ -16,9 +16,16 @@
     <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/feature-detects/css-pointerevents.js"></script>
     </head>
-    <body>
+    <body onload="init()">
         <div>
-          <h5>Touches <span id="touches"></span></h5>
+          <h5>Touches <span id="touches"></span>
+            <br/><span id="showme"></span></h5>
+
+          <div class='terminal'>
+            <div id="dvPointerStatus"></div>
+            <div id="dvMouseStatus"></div>
+          </div>
+
           <h2>User Agent Info</h2>
           <h3>Browser <span id="ua-browser"></span> <span id="ua-browser-version"></span></h3>
           <h3>Browser Engine <span id="ua-engine"></span> <span id='ua-engine-version'></span></h3>
@@ -27,7 +34,6 @@
           <ul id="features"></ul>
           <h2>Supported File Formats</h2>
           <ul id="fileFormats"></ul>
-
           <img src="img/espoded.jpg" alt="Expoded" >
           
         </div>

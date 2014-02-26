@@ -109,3 +109,36 @@ if (touchpoints) {
   
 
 })(jQuery);	
+
+
+function MouseDownResponse(event) {
+            document.getElementById("dvMouseStatus").innerHTML += "Mouse Down<br />";
+        }
+ 
+        function MouseUpResponse(event) {
+            document.getElementById("dvMouseStatus").innerHTML += "Mouse Up<br />";
+        }
+ 
+        function PointerDownResponse(event) {
+            document.getElementById("dvPointerStatus").innerHTML +=
+                "PointerId:" + event.pointerId +
+                " of pointerType:" + event.pointerType + " Down<br />";
+        }
+ 
+        function PointerUpResponse(event) {
+            document.getElementById("dvPointerStatus").innerHTML +=
+                "PointerId:" + event.pointerId +
+                " of pointerType:" + event.pointerType + " Up<br />";
+        }
+ 
+        function init() {
+            document.addEventListener("mousedown", MouseDownResponse, false);
+            document.addEventListener("mouseup", MouseUpResponse, false);
+ 
+            document.addEventListener("pointerdown", PointerDownResponse, false);
+            document.addEventListener("pointerup", PointerUpResponse, false);
+ 
+            // Support for prefixed IE10 implementation
+            document.addEventListener("MSPointerDown", PointerDownResponse, false);
+            document.addEventListener("MSPointerUp", PointerUpResponse, false);
+        }
