@@ -80,11 +80,12 @@ if (window.PointerEvent) {
 }
 
 var touchpoints = navigator.maxTouchPoints;
-    if (touchpoints) {
-      document.getElementById("showme").innerHTML = touchpoints.toString();
-    } else {
-      document.getElementById("showme").innerHTML = "undefined";
-    }
+console.log('navigatior ',navigatior);
+if (touchpoints) {
+  document.getElementById("showme").innerHTML = touchpoints.toString();
+} else {
+  document.getElementById("showme").innerHTML = "undefined";
+}
 
     
 
