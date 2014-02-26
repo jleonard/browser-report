@@ -71,5 +71,19 @@ var ua;
       }
     }
   });
+    
+
+  var touchCount = 0;
+  console.log('hi');
+  $('body').on('pointerdown',function(e){
+    touchCount += 1;
+    $("#touches").text(touchCount);
+  });
+
+  $('body').on('pointerup',function(e){
+    touchCount -= 1;
+    $("#touches").text(touchCount);
+  });
+  
 
 })(jQuery);	
