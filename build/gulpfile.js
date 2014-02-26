@@ -88,7 +88,7 @@ gulp.task('html-replace',function(){
     }
   }
 
-  console.log(files);
+  console.log(files.length);
   console.log(files[0].file);
 
   gulp.src('../*.html')
@@ -97,6 +97,8 @@ gulp.task('html-replace',function(){
   .pipe(replace('{{'+files[2].file+'}}', '<script type="text/javascript">try{ '+files[2].data+'}catch(err){}</script>'))
   .pipe(replace('{{'+files[3].file+'}}', '<script type="text/javascript">try{ '+files[3].data+'}catch(err){}</script>'))
   .pipe(replace('{{'+files[4].file+'}}', '<script type="text/javascript">try{ '+files[4].data+'}catch(err){}</script>'))
+  .pipe(replace('{{'+files[5].file+'}}', '<script type="text/javascript">try{ '+files[5].data+'}catch(err){}</script>'))
+
   .pipe(gulp.dest('../'));
 
 
