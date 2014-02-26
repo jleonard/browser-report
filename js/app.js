@@ -141,4 +141,22 @@ function MouseDownResponse(event) {
             // Support for prefixed IE10 implementation
             document.addEventListener("MSPointerDown", PointerDownResponse, false);
             document.addEventListener("MSPointerUp", PointerUpResponse, false);
+
+            document.addEventListener("mousemove", MouseMoveResponse, false);
+            document.addEventListener("pointermove", PointerMoveResponse, false);
+ 
+            // Support for prefixed IE10 implementation
+            document.addEventListener("MSPointerMove", PointerMoveResponse, false);
+        }
+
+        function MouseMoveResponse(event) {
+            document.getElementById("dvMouseStatus").innerHTML =
+                "Mouse position: " + event.clientX + ", " + event.clientY + "<br />";
+        }
+ 
+        function PointerMoveResponse(event) {
+            document.getElementById("dvPointerStatus").innerHTML =
+                "PointerId:" + event.pointerId + " of pointerType:" + event.pointerType +
+                " isPrimary:" + event.isPrimary +
+                " position: " + event.clientX + ", " + event.clientY + "<br />";
         }
