@@ -74,8 +74,9 @@ var ua;
     
 
   var touchCount = 0;
-  console.log('hi');
+  console.log('hi ',window.maxTouchPoints);
   $('body').on('pointerdown',function(e){
+    console.log('cp ',e.currentPoint);
     touchCount += 1;
     $("#touches").text(touchCount);
   });
