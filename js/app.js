@@ -79,6 +79,13 @@ if (window.PointerEvent) {
   console.log('pointer events are not supported ');
 }
 
+var touchpoints = navigator.maxTouchPoints;
+    if (touchpoints) {
+      document.getElementById("showme").innerHTML = touchpoints.toString();
+    } else {
+      document.getElementById("showme").innerHTML = "undefined";
+    }
+
     
 
   var touchCount = 0;
