@@ -84,6 +84,11 @@ var ua;
     touchCount -= 1;
     $("#touches").text(touchCount);
   });
+
+  $('body').on('pointermove',function(e){
+    touchCount -= 1;
+    $("#touches").text('pointerMoving!!!');
+  });
   
 
 })(jQuery);	
