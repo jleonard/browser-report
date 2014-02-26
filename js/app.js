@@ -87,10 +87,7 @@ if (touchpoints) {
   document.getElementById("showme").innerHTML = "undefined";
 }
 
-    
-
   var touchCount = 0;
-  console.log('hi ',window.maxTouchPoints);
   $('body').on('pointerdown',function(e){
     console.log('cp ',e.currentPoint);
     touchCount += 1;
@@ -106,7 +103,6 @@ if (touchpoints) {
     touchCount -= 1;
     $("#touches").text('pointerMoving!!!');
   });
-  
 
 })(jQuery);	
 

@@ -5,7 +5,7 @@ var gutil      = require('gulp-util');
 //var clean       = require('gulp-clean');
 //var concat      = require('gulp-concat');
 //var exec        = require('gulp-exec');
-//var fs          = require('fs');
+var fs          = require('fs');
 //var gulpif      = require('gulp-if');
 //var header      = require('gulp-header');
 //var jshint      = require('gulp-jshint');
@@ -15,6 +15,7 @@ var livereload  = require('gulp-livereload');
 var minifycss   = require('gulp-minify-css');
 //var path        = require('path');
 var plumber     = require('gulp-plumber');
+var replace     = require('gulp-replace');
 //var rename      = require("gulp-rename");
 //var runSequence = require('run-sequence');
 //var s3          = require("gulp-s3");
@@ -46,7 +47,6 @@ gulp.task('less', function () {
   .pipe(less())
   .pipe(minifycss())
   .pipe(gulp.dest(dist+'css'))
-  .pipe(livereload())
 });
 
 gulp.task('copy', function () {
@@ -54,8 +54,51 @@ gulp.task('copy', function () {
   var dist = '../_mht/';
 
   gulp.src(['../**','!.*','!../build/**','!../less/**','!../bower_components/modernizr/test/**','!../_mht/**'])
-  .pipe(gulp.dest(dist))
-  .pipe(livereload())
+  .pipe(gulp.dest(dist));
+
+  gulp.src('../html/*.html')
+  .pipe(gulp.dest('../'));
+
+});
+
+/*
+* the html-replace task
+* --------------------
+*/
+gulp.task('html-replace',function(){
+
+  var arr = [
+    'js/app.js',
+    'bower_components/jquery/dist/jquery.js',
+    'bower_components/jquery-pointerevents/dist/jquery-pointerevents.js',
+    'bower_components/ua-parser-js/src/ua-parser.js',
+    'bower_components/modernizr/modernizr.js',
+    'bower_components/feature-detects/css-pointerevents.js'
+  ];
+
+  var files = [];
+
+  var len = arr.length;
+  for(var ii = 0; ii < len; ii++){
+    var cur = arr[ii];
+    var path = '../'+cur;
+    if(fs.existsSync(path)){
+      var data = fs.readFileSync(path);
+      files.push({file:cur,data:data});
+    }
+  }
+
+  console.log(files);
+  console.log(files[0].file);
+
+  gulp.src('../*.html')
+  .pipe(replace('{{'+files[0].file+'}}', '<script type="text/javascript">try{ '+files[0].data+'}catch(err){}</script>'))
+  .pipe(replace('{{'+files[1].file+'}}', '<script type="text/javascript">try{ '+files[1].data+'}catch(err){}</script>'))
+  .pipe(replace('{{'+files[2].file+'}}', '<script type="text/javascript">try{ '+files[2].data+'}catch(err){}</script>'))
+  .pipe(replace('{{'+files[3].file+'}}', '<script type="text/javascript">try{ '+files[3].data+'}catch(err){}</script>'))
+  .pipe(replace('{{'+files[4].file+'}}', '<script type="text/javascript">try{ '+files[4].data+'}catch(err){}</script>'))
+  .pipe(gulp.dest('../'));
+
 
 });
 
@@ -70,4 +113,4 @@ gulp.task('watch', function () {
   gulp.watch('../less/**/*.less', ['less']);
 });
 
-gulp.task('default', ['less','copy']);
+gulp.task('default', ['less','copy','html-replace']);
