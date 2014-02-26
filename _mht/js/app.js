@@ -71,6 +71,14 @@ var ua;
       }
     }
   });
+
+if (window.PointerEvent) {
+  // Pointer events are supported.
+  console.log('pointer events are supported.');
+}else{
+  console.log('pointer events are not supported ');
+}
+
     
 
   var touchCount = 0;
